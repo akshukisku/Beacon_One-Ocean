@@ -105,7 +105,6 @@ right: 79%;
   text-align: center;
   /* padding: 3rem 10%; */
   /* background-color: rebeccapurple; */
-
 }
 
 .hero-banner{
@@ -118,7 +117,7 @@ right: 79%;
     border-radius: 20px;
 }
 
-.hero h1 {
+.hero h1{
   font-size: 54px;
   color: #0b1a28;
   font-family: "Sang Sunrise", serif;
@@ -204,72 +203,112 @@ right: 79%;
     text-align: center;
 }
 /* Property-card */
-.property-cards{
-    background-color: var(--bg-color);
+.property-cards {
+  background-color: var(--bg-color);
+  padding: 80px 0;
 }
 
-.card-image img{
-    border-radius: 15px;
-    /* overflow: hidden; */
-    /* box-shadow: 0 5px 20px rgba(0,0,0,0.1); */
-    /* margin-bottom: 30px; */
+.text-section h2 {
+  font-family: "Sang Sunrise", serif;
+  font-weight: 200;
+  font-size: 50px;
+  color: #0b1a28;
+  text-align: center;
+  margin-bottom: 60px;
 }
-.card-text h2{
-    font-family: "Sang Sunrise", serif;
-    font-weight: 200;
-    font-size: 28px;
-    color: #0b1a28;
-    /* margin: 10px 0; */
-    /* padding: 10px 0; */
 
+.property-cards .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+  margin: 40px 0;
 }
-.card-text p{
-    font-family: "Cairo", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color: #666;
-    max-width: 280px;
 
+.col-25 {
+  flex: 1 1 calc(25% - 25px);
+  box-sizing: border-box;
 }
-.card-text{
-    /* background-color: red; */
-    padding: 28px 20px;
-    background-color: var(--nav-bg-color);
-    border-radius: 15px;
-}
-.card-button{
-    margin-top: 90px;
-}
-.card-texter{
-    /* background-color: red; */
-    padding: 38px 20px;
-    background-color: var(--card-color);
-    border-radius: 15px;
-}
-.card-texter h2{
-    font-family: "Sang Sunrise", serif;
-    font-weight: 200;
-    font-size: 28px;
-    color:white;
-    /* margin: 10px 0; */
-    /* padding: 10px 0; */
 
+.card-image figure {
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+  overflow: hidden;
 }
-.card-texter p{
-    font-family: "Cairo", sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    color:white;
-    max-width: 280px;
+
+.card-image img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+.card-text,
+.card-texter {
+  padding: 30px 20px;
+  border-radius: 15px;
+}
+
+.card-text {
+  background-color: var(--nav-bg-color);
+}
+
+.card-texter {
+  background-color: var(--card-color);
+  padding: 40px 15px;
+}
+
+.card-text h2,
+.card-texter h2 {
+  font-family: "Sang Sunrise", serif;
+  font-weight: 200;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.card-text h2 {
+  color: #0b1a28;
+}
+
+.card-texter h2 {
+  color: white;
+}
+
+.card-text p,
+.card-texter p {
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 40px;
+  max-width: 280px;
+}
+
+.card-text p {
+  color: #666;
+}
+
+.card-texter p {
+  color: white;
+}
+
+.card-button {
+  font-family: "Cairo", sans-serif;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
 }
 .card-texter .card-button{
-color: white;
+    color: white;
+    margin-top: 10px;
 }
-.property-cards .row{
-    margin: 10px 0;
+
+.card-button:hover {
+  text-decoration: underline;
 }
-.property-cards .part2{
-    flex-direction: row-reverse;
+
+.property-cards .part2 {
+  flex-direction: row-reverse;
 }
 /* testimonials */
 
@@ -376,45 +415,62 @@ color: white;
   line-height: 1.6;
 }
 
-#testimonial-name {
-  font-weight: bold;
-  color: #333;
-}
-
-#testimonial-role {
-  color: gray;
-  font-size: 14px;
-}
 
 /* advertise */
-.advertise-content{
-    background-color: var(--advertise-bg-color);
-    border-radius: 5px;
-    padding: 10px 20px;
-    /* text-align: center; */
-    color: white;
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto;
-    gap:30px;
-    position: relative;
-    bottom: -50px;
-}
-.advertise-content h2{
-    font-family: "Sang Sunrise", serif;
-    font-weight: 200;
-    font-size: 50px;
-}
-.icon{
-    max-width: 100px;
-}
-.advertise-content .hero-btn{
-    background-color: white;
-    color: black
+.advertise {
+  position: relative;
+  z-index: 10;
+  padding-bottom: 80px; 
 }
 
+.advertise-content {
+  background-color: var(--advertise-bg-color);
+  border-radius: 10px;
+  padding: 20px 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 30px;
+  position: relative;
+  bottom: -50px;
+  text-align: center;
+  flex-wrap: wrap;
+}
 
+.advertise-content h2 {
+  font-family: "Sang Sunrise", serif;
+  font-weight: 200;
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+.icon {
+  max-width: 100px;
+}
+
+.icon img {
+  width: 100%;
+  display: block;
+}
+
+.advertise-content .hero-btn {
+  background-color: white;
+  color: black;
+  border-radius: 230px;
+  padding: 0.7rem 35px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.advertise-content .hero-btn:hover {
+  background-color: #5b1558;
+  color: white;
+}
 /* footer */
 footer{
     overflow-x: hidden;
@@ -432,7 +488,8 @@ footer h4{
     font-weight: 200;
     font-size: 18px;
     margin-bottom: 20px;
-    /* border-bottom: 1px solid white; */
+    border-bottom: 1px solid white;
+    /* width: 50%; */
 }
 footer ul li {
   margin-bottom: 8px;
@@ -450,39 +507,48 @@ footer ul li a:hover {
 }
 
 .subscribe {
+  position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 350px;
   margin-bottom: 20px;
-  border: 1px solid #777;
-  border-radius: 25px;
-  padding: 3px;
 }
 
 .subscribe input {
-  flex: 1;
+  width: 100%;
   background: none;
-  border: none;
+  border: 1px solid #777;
+  border-radius: 25px;
   color: #fff;
-  padding: 8px 15px;
+  padding: 10px 15px;
   font-size: 14px;
   outline: none;
 }
 
 .subscribe button {
+  position: absolute;
+  right: -45px; /* moves button outside input */
   background-color: #b35cff;
   border: none;
   color: #fff;
-  padding: 8px 12px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   cursor: pointer;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe button i {
+  font-size: 22px;
 }
 
 .subscribe button:hover {
   background-color: #7a2de2;
 }
-
-/* ===== Social Icons ===== */
 .social-icons a {
   /* color: #fff; */
 background-color: white;
@@ -510,8 +576,16 @@ background-color: white;
 }
 
 
-/* Resposnive */
 
+/* Resposnive */
+@media screen and (max-width:1199) {
+.property-cards .row .col{
+    width: 100%;
+    background-color: red;
+}
+
+    
+}
 @media screen and (max-width: 991px) {
     .navbar-items{
         display: none;
@@ -525,4 +599,221 @@ background-color: white;
         font-size: 28px;
         cursor: pointer;
     }
+     .hero-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    max-width: 600px;
+  }
+
+  .hero-image img {
+    /* margin-top: 90px; */
+    /* padding-top: 100px; */
+    max-width: 700px;
+  }
+  /* peoperty */
+    .text-section h2 {
+    font-size: 42px;
+  }
+.property-cards .col{
+    width: 100%;
+}
+  .property-cards .row {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .card-text p,
+  .card-texter p {
+    max-width: 100%;
+  }
+  .advertise-content {
+    padding: 20px 30px;
+    gap: 20px;
+  }
+
+  .advertise-content h2 {
+    font-size: 40px;
+  }
+
+  .icon {
+    max-width: 80px;
+  }
+
+  .advertise-content .hero-btn {
+    padding: 0.6rem 30px;
+    font-size: 0.9rem;
+  }
+    .advertise-content {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 15px;
+    bottom: -30px;
+    padding: 25px 20px;
+  }
+
+  .advertise-content h2 {
+    font-size: 32px;
+  }
+
+  .icon {
+    max-width: 70px;
+  }
+    .testimonials-section {
+    padding: 50px 15px;
+  }
+
+  .testimonials-section h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+
+  .swiper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .swiper-images {
+    gap: 15px;
+  }
+
+  .nav-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .swiper-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .testimonial-content p {
+    font-size: 15px;
+    line-height: 24px;
+    padding: 0 10px;
+  }
+
+  .testimonial-content h4 {
+    font-size: 13px;
+  }
+  footer{
+    text-align: center;
+  }
+  footer .row{
+    flex-direction: column;
+    gap: 15px;
+  }
+  footer .col{
+    /* background-color: red; */
+    width: 100%;
+  }
+   .subscribe {
+    max-width: 300px;
+  }
+
+  .subscribe input {
+    font-size: 13px;
+    padding: 9px 12px;
+  }
+
+  .subscribe button {
+    right: -12px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .subscribe button i {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+    .property-cards .part2{
+        flex-direction: column;
+    }
+    .advertise-content{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .property-section .row{
+        flex-direction: column;
+    }
+    .property-section .col{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+      .advertise-content {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 15px;
+    bottom: -30px;
+    padding: 25px 20px;
+  }
+
+  .advertise-content h2 {
+    font-size: 32px;
+  }
+
+  .icon {
+    max-width: 70px;
+  }
+    .testimonials-section {
+    padding: 40px 10px;
+  }
+
+  .testimonials-section h2 {
+    font-size: 30px;
+  }
+
+  .heading-title {
+    font-size: 12px;
+    padding: 4px 15px;
+  }
+
+  .swiper {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .swiper-images {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .swiper-img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .testimonial-content p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .testimonial-content h4 {
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 11px;
+  }
 }
