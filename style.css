@@ -251,11 +251,12 @@ right: 79%;
 
 .card-text {
   background-color: var(--nav-bg-color);
+  padding: 35px 20px;
 }
 
 .card-texter {
   background-color: var(--card-color);
-  padding: 40px 15px;
+  padding: 45px 15px;
 }
 
 .card-text h2,
@@ -588,7 +589,20 @@ background-color: white;
 }
 @media screen and (max-width: 991px) {
     .navbar-items{
+        position: absolute;
         display: none;
+        top: 70px;
+        left: 2px;
+         flex-direction: column;
+        background-color: var(--nav-bg-color);
+        width: 100%;
+        padding: 20px 0;
+    }
+    .navbar-links{
+        flex-direction: column;
+        background-color: var(--nav-bg-color);
+        width: 100%;
+        padding: 20px 0;
     }
     .navbar-toggler{
         display: block;
